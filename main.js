@@ -501,11 +501,11 @@ class WhiteCat {
 
 class Seal {
     constructor() {
-        this.size = 160; // Doubled size
+        this.size = 110; 
         this.direction = Math.random() > 0.5 ? 1 : -1;
         this.x = this.direction === 1 ? -150 : width + 150;
         this.y = 100 + Math.random() * (height - 200);
-        this.speed = 400 + Math.random() * 200;
+        this.speed = 250 + Math.random() * 100;
         this.dead = false;
     }
     update(dt) {

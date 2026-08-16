@@ -240,9 +240,11 @@ canvas {
 @media (max-width: 600px) {
     #top-bar {
         flex-direction: column;
-        gap: 10px;
-        left: 10px;
-        top: 10px;
+        gap: 5px;
+        left: 5px;
+        top: 5px;
+        transform: scale(0.7);
+        transform-origin: top left;
     }
     #skin-selector {
         flex-wrap: wrap;

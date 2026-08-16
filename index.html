@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, orientation=landscape">
+    <title>Kawaii Penguin vs Cats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Main Game Canvas -->
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- UI Overlay -->
+        <div id="ui-layer">
+            <div id="top-bar">
+                <div class="health-container">
+                    <div class="health-icon">❤️</div>
+                    <div class="bars-wrapper">
+                        <div class="health-bar-bg">
+                            <div id="health-bar-fill"></div>
+                        </div>
+                        <div class="hydration-bar-bg">
+                            <div id="hydration-bar-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inventory-container">
+                    <div class="inventory-icon" id="inventory-snow">❄️ x0</div>
+                </div>
+                <div class="score-container">
+                    <div class="score-text">Puntos: <span id="score-display">0</span></div>
+                </div>
+                <div class="kofi-top">
+                    <a href="https://ko-fi.com/leindx" target="_blank" class="kofi-button kofi-small">☕ Ko-fi</a>
+                </div>
+            </div>
+            
+            <div id="start-screen">
+                <h1>Pingüino Kawaii 🐧</h1>
+                <p>¡Elige tu Skin!</p>
+                <div id="skin-selector">
+                    <button class="skin-btn selected" data-skin="penguin">Clásico</button>
+                    <button class="skin-btn" data-skin="penguin_wizard">Mago</button>
+                    <button class="skin-btn" data-skin="penguin_chef">Chef</button>
+                    <button class="skin-btn" data-skin="penguin_ninja">Ninja</button>
+                </div>
+                <button id="btn-start">Jugar</button>
+                <div class="kofi-container">
+                    <a href="https://ko-fi.com/leindx" target="_blank" class="kofi-button">☕ Apóyame en Ko-fi</a>
+                </div>
+            </div>
+            
+            <div id="game-over-screen" class="hidden">
+                <h1>¡Oh no!</h1>
+                <p>El pingüinito necesita más cuidado.</p>
+                <div class="final-score">Puntuación Final: <span id="final-score-display">0</span></div>
+                <div id="high-scores-board">
+                    <h3>🏆 Récords 🏆</h3>
+                    <ul id="high-scores-list"></ul>
+                </div>
+                <button id="btn-restart">Volver a Jugar</button>
+                <div class="kofi-container">
+                    <a href="https://ko-fi.com/leindx" target="_blank" class="kofi-button">☕ Apóyame en Ko-fi</a>
+                </div>
+            </div>
+            
+            <button id="btn-superpower" class="hidden">✨ ¡ESTAMPIDA PINGÜINA! ✨</button>
+            
+            <!-- Virtual Joystick -->
+            <div id="joystick-zone">
+                <div id="joystick-base">
+                    <div id="joystick-knob"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="main.js"></script>
+</body>
+</html>

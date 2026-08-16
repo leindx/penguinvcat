@@ -148,10 +148,42 @@ canvas {
     margin-bottom: 15px;
 }
 
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+.logo-icon.right {
+    animation-delay: 1s;
+    transform: scaleX(-1);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.logo-icon.right {
+    animation: bounceRight 2s infinite ease-in-out;
+    animation-delay: 1s;
+}
+@keyframes bounceRight {
+    0%, 100% { transform: translateY(0) scaleX(-1); }
+    50% { transform: translateY(-10px) scaleX(-1); }
+}
+
 #skin-selector {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
     margin-bottom: 20px;
 }
 
@@ -159,13 +191,49 @@ canvas {
     background: #f1f2f6;
     border: 3px solid #ced6e0;
     padding: 10px;
-    border-radius: 15px;
-    font-size: 16px;
+    border-radius: 20px;
+    font-size: 14px;
     font-weight: bold;
     cursor: pointer;
     font-family: inherit;
     color: #2f3542;
     transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90px;
+}
+
+.skin-btn img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+    transition: transform 0.2s;
+}
+
+.skin-btn:hover {
+    transform: translateY(-5px);
+    border-color: #7bed9f;
+}
+
+.skin-btn:hover img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.skin-btn.selected {
+    border-color: #1e90ff;
+    background: #e6f7ff;
+    color: #1e90ff;
+    transform: scale(1.05);
+}
+
+.skin-btn.selected img {
+    animation: hop 1s infinite;
+}
+
+@keyframes hop {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
 }
 
 .kofi-container {

@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, orientation=landscape">
-    <title>Kawaii Penguin vs Cats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Penguin v. Cat</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -37,13 +37,29 @@
             </div>
             
             <div id="start-screen">
-                <h1>Pingüino Kawaii 🐧</h1>
-                <p>¡Elige tu Skin!</p>
+                <div class="logo-container">
+                    <img src="assets/kawaii_penguin.png" class="logo-icon left">
+                    <h1>Penguin v. Cat</h1>
+                    <img src="assets/kawaii_cat.png" class="logo-icon right">
+                </div>
+                <p>¡Elige a tu héroe kawaii!</p>
                 <div id="skin-selector">
-                    <button class="skin-btn selected" data-skin="penguin">Clásico</button>
-                    <button class="skin-btn" data-skin="penguin_wizard">Mago</button>
-                    <button class="skin-btn" data-skin="penguin_chef">Chef</button>
-                    <button class="skin-btn" data-skin="penguin_ninja">Ninja</button>
+                    <button class="skin-btn selected" data-skin="penguin">
+                        <img src="assets/kawaii_penguin.png" alt="Clásico">
+                        <span>Clásico</span>
+                    </button>
+                    <button class="skin-btn" data-skin="penguin_wizard">
+                        <img src="assets/kawaii_penguin_wizard.png" alt="Mago">
+                        <span>Mago</span>
+                    </button>
+                    <button class="skin-btn" data-skin="penguin_chef">
+                        <img src="assets/kawaii_penguin_chef.png" alt="Chef">
+                        <span>Chef</span>
+                    </button>
+                    <button class="skin-btn" data-skin="penguin_ninja">
+                        <img src="assets/kawaii_penguin_ninja.png" alt="Ninja">
+                        <span>Ninja</span>
+                    </button>
                 </div>
                 <button id="btn-start">Jugar</button>
                 <div class="kofi-container">

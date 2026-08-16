@@ -17,11 +17,14 @@ const skinBtns = document.querySelectorAll('.skin-btn');
 
 let selectedSkin = 'penguin';
 skinBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
+    const handleSkinSelect = (e) => {
+        if (e.type === 'touchstart') e.preventDefault();
         skinBtns.forEach(b => b.classList.remove('selected'));
         btn.classList.add('selected');
         selectedSkin = btn.dataset.skin;
-    });
+    };
+    btn.addEventListener('click', handleSkinSelect);
+    btn.addEventListener('touchstart', handleSkinSelect, {passive: false});
 });
 
 // --- AUDIO ENGINE V2 (Softer, Kawaii Sounds) ---

@@ -236,6 +236,33 @@ canvas {
     50% { transform: translateY(-5px); }
 }
 
+/* RESPONSIVE MOBILE LAYOUT */
+@media (max-width: 600px) {
+    #top-bar {
+        flex-direction: column;
+        gap: 10px;
+        left: 10px;
+        top: 10px;
+    }
+    #skin-selector {
+        flex-wrap: wrap;
+    }
+    .kofi-top {
+        margin-left: 0;
+    }
+    .logo-container h1 {
+        font-size: 24px;
+    }
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+    }
+    .kofi-button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
 .kofi-container {
     margin-top: 20px;
 }
